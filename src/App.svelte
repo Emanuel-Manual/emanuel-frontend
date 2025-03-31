@@ -35,7 +35,8 @@
       <Resizable.Pane class="relative h-full overflow-hidden">
         {#if selectedQuestion}
         <div class="absolute bottom-0 z-50 w-full p-4  ">
-            <div class="flex flex-row items-center gap-4 p-10 bg-white rounded-lg shadow-lg border-2  question-info">
+          <div class="items-center gap-4 p-10 bg-white rounded-lg shadow-lg border-2  question-info">
+            <div class="flex flex-row ">
                 <div class="flex-1">
                     <div class="question">{selectedQuestion.question}</div>
                     {#if selectedQuestion.answer_found}
@@ -46,20 +47,10 @@
                         <p class="comment-text">"<em><strong>{selectedQuestion.comment}</strong></em>"</p>
                     </div>
                     {/if}
-                    {#if selectedQuestion.improvement_suggestions && selectedQuestion.improvement_suggestions.length}
-                    <div class="improvements-box">
-                        <h4 class="improvements-title">Improvement Suggestions:</h4>
-                        <ul class="improvements-list">
-                            {#each selectedQuestion.improvement_suggestions as suggestion}
-                                <li class="improvement-item">{suggestion}</li>
-                            {/each}
-                        </ul>
-                    </div>
-                    {/if}
                 </div>
                 
-                <div class="status-indicators">
-                    <div class="flex flex-row items-center gap-2">
+                <div class="status-indicators p-5">
+                    <div class="flex flex-row items-center  gap-2">
                         {#if selectedQuestion.answered}
                             <div class="bg-green-200 rounded-full w-fit p-2">
                                 <CircleCheck class="h-5 w-5" />
@@ -82,6 +73,17 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            {#if selectedQuestion.improvement_suggestions && selectedQuestion.improvement_suggestions.length}
+                    <div class="improvements-box mt-4">
+                        <h4 class="improvements-title">Improvement Suggestions:</h4>
+                        <ul class="improvements-list">
+                            {#each selectedQuestion.improvement_suggestions as suggestion}
+                                <li class="improvement-item">{suggestion}</li>
+                            {/each}
+                        </ul>
+                    </div>
+            {/if}
             </div>
         </div>
         {/if}
@@ -144,7 +146,7 @@
         background-color: #e6f7ff;
         padding: 10px;
         border-radius: 4px;
-        margin-top: 10px;
+       
         max-height: 20vh;
         overflow-y: auto;
         border-left: 4px solid #1890ff;
