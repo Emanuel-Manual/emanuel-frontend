@@ -120,7 +120,7 @@
                   <Accordion.Trigger>
                     <div class="flex items-start gap-4 text-left w-full pr-4">
                       <Avatar.Root>
-                        <Avatar.Image src="https://thispersondoesnotexist.com?random={i}" />
+                        <Avatar.Image src="https://randomuser.me/api/portraits/{persona.gender}/{i}.jpg" />
                         <!-- derive initials from first and last name -->
                         <Avatar.Fallback>
                           {persona.name.split(' ')[0][0]}{persona.name.split(' ')[1] ? persona.name.split(' ')[1][0] : ''}

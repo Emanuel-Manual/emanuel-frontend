@@ -12,6 +12,7 @@
     {
       "name": "Beate Bumsbaum",
       "age": 55,
+      "gender": "women",
       "short_description": "Non Technical",
       "current_setting": "At home",
       "short_scenario": "Beate is a 55-year-old non-technical user who uses the DigiFunk 1 system at home. She is not very tech-savvy and needs a simple and intuitive interface.",
@@ -94,6 +95,7 @@
     {
       "name": "Alexandra Smith",
       "age": 30,
+      "gender": "women",
       "short_description": "Technical Expert",
       "current_setting": "Office",
       "short_scenario": "Alexandra is a skilled technical expert working in an office environment, focused on optimizing system performance.",
@@ -176,6 +178,7 @@
     {
       "name": "John Doe",
       "age": 40,
+      "gender": "men",
       "short_description": "IT Specialist",
       "current_setting": "Data Center",
       "short_scenario": "John manages complex IT networks and ensures smooth operation of all systems.",
@@ -258,6 +261,7 @@
     {
       "name": "Maria Garcia",
       "age": 35,
+      "gender": "women",
       "short_description": "UX Designer",
       "current_setting": "Remote",
       "short_scenario": "Maria designs intuitive interfaces and ensures the system is user friendly.",
@@ -340,6 +344,7 @@
     {
       "name": "Liam Nguyen",
       "age": 28,
+      "gender": "men",
       "short_description": "System Analyst",
       "current_setting": "Head Office",
       "short_scenario": "Liam analyzes business needs and refines system processes for optimal performance.",
