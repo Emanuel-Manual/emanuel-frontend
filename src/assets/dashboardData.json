@@ -12,6 +12,7 @@
     {
       "name": "Beate Bumsbaum",
       "age": 55,
+      "gender": "women",
       "short_description": "Non Technical",
       "current_setting": "At home",
       "short_scenario": "Beate is a 55-year-old non-technical user who uses the DigiFunk 1 system at home. She is not very tech-savvy and needs a simple and intuitive interface.",
@@ -24,76 +25,129 @@
           "answer_found": "Press the power button on the front panel.",
           "manual_reference": ["Aufnahme vom TechniSat"],
           "answered": true,
-          "satisfaction": 0.77
+          "satisfaction": 0.77,
+          "comment": "The power button is clearly labeled on the front panel.",
+          "improvement_suggestions": [
+            "Add a diagram showing the power button location",
+            "Include troubleshooting for when power button doesn't respond",
+            "Add information about standby mode indicators"
+          ]
         },
         {
           "question": "How do I adjust the volume?",
           "answer_found": "Use the volume knob.",
           "manual_reference": ["Zunächst muss ein weiterer"],
           "answered": false,
-          "satisfaction": 0.22
+          "satisfaction": 0.22,
+          "comment": "Volume adjustment needs more detailed instructions.",
+          "improvement_suggestions": [
+            "Specify the exact location of the volume knob",
+            "Explain minimum and maximum volume settings",
+            "Add information about mute functionality"
+          ]
         },
         {
           "question": "How do I reset the system?",
           "answer_found": "Press and hold the reset button for 5 seconds.",
           "manual_reference": ["Reset button info"],
           "answered": false,
-          "satisfaction": 0.5
+          "satisfaction": 0.5,
+          "improvement_suggestions": [
+            "Clarify where the reset button is located",
+            "Explain what happens during a reset",
+            "Include when a reset should be performed"
+          ]
         },
         {
           "question": "How do I connect to Wi-Fi?",
           "answer_found": "Go to settings and select Wi-Fi.",
           "manual_reference": ["Wi-Fi settings"],
           "answered": false,
-          "satisfaction": 0.5
+          "satisfaction": 0.5,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for connecting to Wi-Fi",
+            "Explain different Wi-Fi security options",
+            "Include troubleshooting for Wi-Fi connection issues"
+          ]
         },
         {
           "question": "How do I update the firmware?",
           "answer_found": "Connect to the internet and follow instructions.",
           "manual_reference": ["Firmware update guide"],
           "answered": false,
-          "satisfaction": 0.5
+          "satisfaction": 0.5,
+          "improvement_suggestions": [
+            "Clarify where to find firmware update instructions",
+            "Explain the benefits of updating firmware",
+            "Include troubleshooting for firmware update failures"
+          ]
         },
         {
           "question": "How do I check system status?",
           "answer_found": "Navigate to the status tab.",
           "manual_reference": ["Status tab"],
           "answered": true,
-          "satisfaction": 0.80
+          "satisfaction": 0.80,
+          "improvement_suggestions": [
+            "Provide more details on the information displayed in the status tab",
+            "Explain how to interpret system status indicators",
+            "Include troubleshooting for system status issues"
+          ]
         },
         {
           "question": "How do I troubleshoot errors?",
           "answer_found": "Refer to the troubleshooting guide.",
           "manual_reference": ["Troubleshooting guide"],
           "answered": false,
-          "satisfaction": 0.60
+          "satisfaction": 0.60,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for common error troubleshooting",
+            "Explain how to access the troubleshooting guide",
+            "Include troubleshooting for specific error codes"
+          ]
         },
         {
           "question": "How do I configure network settings?",
           "answer_found": "Access the network settings via the system menu.",
           "manual_reference": ["Network settings"],
           "answered": false,
-          "satisfaction": 0.50
+          "satisfaction": 0.50,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for configuring network settings",
+            "Explain different network configuration options",
+            "Include troubleshooting for network configuration issues"
+          ]
         },
         {
           "question": "How do I view log files?",
           "answer_found": "Logs can be viewed in the admin panel.",
           "manual_reference": ["Admin panel logs"],
           "answered": true,
-          "satisfaction": 0.70
+          "satisfaction": 0.70,
+          "improvement_suggestions": [
+            "Provide more details on the information displayed in log files",
+            "Explain how to interpret log file entries",
+            "Include troubleshooting for log file access issues"
+          ]
         },
         {
-          "question": " How do I exit the application?",
+          "question": "How do I exit the application?",
           "answer_found": "Click on the exit button.",
           "manual_reference": ["Exit instructions"],
           "answered": false,
-          "satisfaction": 0.40
+          "satisfaction": 0.40,
+          "improvement_suggestions": [
+            "Clarify where the exit button is located",
+            "Explain what happens when the application is exited",
+            "Include troubleshooting for exit button issues"
+          ]
         }
       ]
     },
     {
       "name": "Alexandra Smith",
       "age": 30,
+      "gender": "women",
       "short_description": "Technical Expert",
       "current_setting": "Office",
       "short_scenario": "Alexandra is a skilled technical expert working in an office environment, focused on optimizing system performance.",
@@ -106,76 +160,129 @@
           "answer_found": "Follow the startup protocol.",
           "manual_reference": ["Startup protocol"],
           "answered": true,
-          "satisfaction": 0.85
+          "satisfaction": 0.85,
+          "comment": "The startup protocol is well documented in the manual.",
+          "improvement_suggestions": [
+            "Provide more details on the startup protocol steps",
+            "Explain common issues during server initialization",
+            "Include troubleshooting for server startup failures"
+          ]
         },
         {
           "question": "How do I access the dashboard?",
           "answer_found": "Login and navigate to the dashboard.",
           "manual_reference": ["Dashboard login"],
           "answered": true,
-          "satisfaction": 0.90
+          "satisfaction": 0.90,
+          "comment": "Dashboard access is straightforward with clear login instructions.",
+          "improvement_suggestions": [
+            "Provide more details on the information displayed in the dashboard",
+            "Explain how to interpret dashboard metrics",
+            "Include troubleshooting for dashboard access issues"
+          ]
         },
         {
           "question": "How do I update API endpoints?",
           "answer_found": "Consult the API documentation.",
           "manual_reference": ["API docs"],
           "answered": false,
-          "satisfaction": 0.70
+          "satisfaction": 0.70,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for updating API endpoints",
+            "Explain different API endpoint configuration options",
+            "Include troubleshooting for API endpoint update issues"
+          ]
         },
         {
           "question": "How do I monitor system performance?",
           "answer_found": "Use the performance monitoring tool.",
           "manual_reference": ["Monitoring tool"],
           "answered": true,
-          "satisfaction": 0.80
+          "satisfaction": 0.80,
+          "improvement_suggestions": [
+            "Provide more details on the information displayed in the performance monitoring tool",
+            "Explain how to interpret performance metrics",
+            "Include troubleshooting for performance monitoring tool issues"
+          ]
         },
         {
           "question": "How do I reset credentials?",
           "answer_found": "Follow the reset instructions.",
           "manual_reference": ["Credential reset guide"],
           "answered": false,
-          "satisfaction": 0.60
+          "satisfaction": 0.60,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for resetting credentials",
+            "Explain different credential reset options",
+            "Include troubleshooting for credential reset issues"
+          ]
         },
         {
           "question": "How do I backup system data?",
           "answer_found": "Use the backup utility.",
           "manual_reference": ["Backup instructions"],
           "answered": true,
-          "satisfaction": 0.85
+          "satisfaction": 0.85,
+          "improvement_suggestions": [
+            "Provide more details on the backup utility steps",
+            "Explain common issues during system data backup",
+            "Include troubleshooting for system data backup failures"
+          ]
         },
         {
           "question": "How do I restore from backup?",
           "answer_found": "Follow the restore procedure.",
           "manual_reference": ["Restore procedure"],
           "answered": false,
-          "satisfaction": 0.65
+          "satisfaction": 0.65,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for restoring from backup",
+            "Explain different restore options",
+            "Include troubleshooting for restore issues"
+          ]
         },
         {
           "question": "How do I configure the firewall?",
           "answer_found": "Access firewall settings.",
           "manual_reference": ["Firewall configuration"],
           "answered": true,
-          "satisfaction": 0.75
+          "satisfaction": 0.75,
+          "improvement_suggestions": [
+            "Provide more details on the firewall configuration steps",
+            "Explain common issues during firewall configuration",
+            "Include troubleshooting for firewall configuration failures"
+          ]
         },
         {
           "question": "How do I execute a system update?",
           "answer_found": "Run the system update command.",
           "manual_reference": ["System update guide"],
           "answered": false,
-          "satisfaction": 0.70
+          "satisfaction": 0.70,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for executing a system update",
+            "Explain different system update options",
+            "Include troubleshooting for system update issues"
+          ]
         },
         {
-          "question": " How do I shut down the server?",
+          "question": "How do I shut down the server?",
           "answer_found": "Initiate the shutdown sequence.",
           "manual_reference": ["Shutdown procedure"],
           "answered": true,
-          "satisfaction": 0.80
+          "satisfaction": 0.80,
+          "improvement_suggestions": [
+            "Provide more details on the shutdown sequence steps",
+            "Explain common issues during server shutdown",
+            "Include troubleshooting for server shutdown failures"
+          ]
         }
       ]
     },
     {
       "name": "John Doe",
       "age": 40,
+      "gender": "men",
       "short_description": "IT Specialist",
       "current_setting": "Data Center",
       "short_scenario": "John manages complex IT networks and ensures smooth operation of all systems.",
@@ -188,76 +295,129 @@
           "answer_found": "Use the network monitor tool.",
           "manual_reference": ["Network monitor"],
           "answered": true,
-          "satisfaction": 0.80
+          "satisfaction": 0.80,
+          "comment": "The network monitor tool is intuitive and easy to use.",
+          "improvement_suggestions": [
+            "Provide more details on the information displayed in the network monitor tool",
+            "Explain how to interpret network traffic metrics",
+            "Include troubleshooting for network monitor tool issues"
+          ]
         },
         {
           "question": "How do I restart routers?",
           "answer_found": "Restart via the admin panel.",
           "manual_reference": ["Admin panel"],
           "answered": false,
-          "satisfaction": 0.65
+          "satisfaction": 0.65,
+          "comment": "The admin panel location should be more clearly specified.",
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for restarting routers",
+            "Explain different router restart options",
+            "Include troubleshooting for router restart issues"
+          ]
         },
         {
           "question": "How do I configure network switches?",
           "answer_found": "Setup using the CLI guide.",
           "manual_reference": ["CLI guide"],
           "answered": true,
-          "satisfaction": 0.75
+          "satisfaction": 0.75,
+          "improvement_suggestions": [
+            "Provide more details on the CLI guide steps",
+            "Explain common issues during network switch configuration",
+            "Include troubleshooting for network switch configuration failures"
+          ]
         },
         {
           "question": "How do I update device firmware?",
           "answer_found": "Use the firmware update tool.",
           "manual_reference": ["Firmware update tool"],
           "answered": false,
-          "satisfaction": 0.70
+          "satisfaction": 0.70,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for updating device firmware",
+            "Explain different device firmware update options",
+            "Include troubleshooting for device firmware update issues"
+          ]
         },
         {
           "question": "How do I manage IP configurations?",
           "answer_found": "Configure via DHCP settings.",
           "manual_reference": ["DHCP guide"],
           "answered": true,
-          "satisfaction": 0.85
+          "satisfaction": 0.85,
+          "improvement_suggestions": [
+            "Provide more details on the DHCP guide steps",
+            "Explain common issues during IP configuration management",
+            "Include troubleshooting for IP configuration management failures"
+          ]
         },
         {
           "question": "How do I access the control panel?",
           "answer_found": "Login to the control panel.",
           "manual_reference": ["Control panel access"],
           "answered": false,
-          "satisfaction": 0.60
+          "satisfaction": 0.60,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for accessing the control panel",
+            "Explain different control panel access options",
+            "Include troubleshooting for control panel access issues"
+          ]
         },
         {
           "question": "How do I schedule maintenance?",
           "answer_found": "Use the scheduling tool.",
           "manual_reference": ["Maintenance scheduler"],
           "answered": true,
-          "satisfaction": 0.80
+          "satisfaction": 0.80,
+          "improvement_suggestions": [
+            "Provide more details on the scheduling tool steps",
+            "Explain common issues during maintenance scheduling",
+            "Include troubleshooting for maintenance scheduling failures"
+          ]
         },
         {
           "question": "How do I view system logs?",
           "answer_found": "Access logs via the admin section.",
           "manual_reference": ["Admin logs"],
           "answered": false,
-          "satisfaction": 0.70
+          "satisfaction": 0.70,
+          "improvement_suggestions": [
+            "Provide more details on the information displayed in system logs",
+            "Explain how to interpret system log entries",
+            "Include troubleshooting for system log access issues"
+          ]
         },
         {
           "question": "How do I set up error alerts?",
           "answer_found": "Configure alerts in settings.",
           "manual_reference": ["Alert settings"],
           "answered": true,
-          "satisfaction": 0.75
+          "satisfaction": 0.75,
+          "improvement_suggestions": [
+            "Provide more details on the alert configuration steps",
+            "Explain common issues during error alert setup",
+            "Include troubleshooting for error alert setup failures"
+          ]
         },
         {
-          "question": " How do I troubleshoot outages?",
+          "question": "How do I troubleshoot outages?",
           "answer_found": "Follow the outage troubleshooting guide.",
           "manual_reference": ["Outage guide"],
           "answered": false,
-          "satisfaction": 0.65
+          "satisfaction": 0.65,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for troubleshooting outages",
+            "Explain different outage troubleshooting options",
+            "Include troubleshooting for specific outage scenarios"
+          ]
         }
       ]
     },
     {
       "name": "Maria Garcia",
       "age": 35,
+      "gender": "women",
       "short_description": "UX Designer",
       "current_setting": "Remote",
       "short_scenario": "Maria designs intuitive interfaces and ensures the system is user friendly.",
@@ -270,76 +430,129 @@
           "answer_found": "Click on the design toggle.",
           "manual_reference": ["Design toggle info"],
           "answered": true,
-          "satisfaction": 0.90
+          "satisfaction": 0.90,
+          "comment": "Design toggle is prominently displayed in the interface.",
+          "improvement_suggestions": [
+            "Provide more details on the design toggle steps",
+            "Explain common issues during design mode activation",
+            "Include troubleshooting for design mode activation failures"
+          ]
         },
         {
           "question": "How do I preview layouts?",
           "answer_found": "Use the preview button.",
           "manual_reference": ["Preview instructions"],
           "answered": true,
-          "satisfaction": 0.85
+          "satisfaction": 0.85,
+          "comment": "Preview functionality works well but could load faster.",
+          "improvement_suggestions": [
+            "Provide more details on the preview button steps",
+            "Explain common issues during layout preview",
+            "Include troubleshooting for layout preview failures"
+          ]
         },
         {
           "question": "How do I export prototypes?",
           "answer_found": "Select export from the menu.",
           "manual_reference": ["Export options"],
           "answered": false,
-          "satisfaction": 0.80
+          "satisfaction": 0.80,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for exporting prototypes",
+            "Explain different prototype export options",
+            "Include troubleshooting for prototype export issues"
+          ]
         },
         {
           "question": "How do I collaborate with developers?",
           "answer_found": "Utilize collaboration tools.",
           "manual_reference": ["Collaboration guide"],
           "answered": true,
-          "satisfaction": 0.88
+          "satisfaction": 0.88,
+          "improvement_suggestions": [
+            "Provide more details on the collaboration tools steps",
+            "Explain common issues during developer collaboration",
+            "Include troubleshooting for developer collaboration failures"
+          ]
         },
         {
           "question": "How do I use design templates?",
           "answer_found": "Choose a template from the library.",
           "manual_reference": ["Template library"],
           "answered": true,
-          "satisfaction": 0.87
+          "satisfaction": 0.87,
+          "improvement_suggestions": [
+            "Provide more details on the template library steps",
+            "Explain common issues during design template usage",
+            "Include troubleshooting for design template usage failures"
+          ]
         },
         {
           "question": "How do I save my design changes?",
           "answer_found": "Click the save icon.",
           "manual_reference": ["Save instructions"],
           "answered": false,
-          "satisfaction": 0.80
+          "satisfaction": 0.80,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for saving design changes",
+            "Explain different design change save options",
+            "Include troubleshooting for design change save issues"
+          ]
         },
         {
           "question": "How do I zoom in/out on designs?",
           "answer_found": "Use the zoom controls.",
           "manual_reference": ["Zoom control info"],
           "answered": true,
-          "satisfaction": 0.85
+          "satisfaction": 0.85,
+          "improvement_suggestions": [
+            "Provide more details on the zoom control steps",
+            "Explain common issues during design zooming",
+            "Include troubleshooting for design zooming failures"
+          ]
         },
         {
           "question": "How do I reset design layout?",
           "answer_found": "Click on reset to default.",
           "manual_reference": ["Reset instructions"],
           "answered": false,
-          "satisfaction": 0.75
+          "satisfaction": 0.75,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for resetting design layout",
+            "Explain different design layout reset options",
+            "Include troubleshooting for design layout reset issues"
+          ]
         },
         {
           "question": "How do I add annotations?",
           "answer_found": "Use the annotation feature.",
           "manual_reference": ["Annotation tool"],
           "answered": true,
-          "satisfaction": 0.90
+          "satisfaction": 0.90,
+          "improvement_suggestions": [
+            "Provide more details on the annotation feature steps",
+            "Explain common issues during annotation addition",
+            "Include troubleshooting for annotation addition failures"
+          ]
         },
         {
-          "question": " How do I share my designs?",
+          "question": "How do I share my designs?",
           "answer_found": "Click on the share option.",
           "manual_reference": ["Share settings"],
           "answered": false,
-          "satisfaction": 0.80
+          "satisfaction": 0.80,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for sharing designs",
+            "Explain different design sharing options",
+            "Include troubleshooting for design sharing issues"
+          ]
         }
       ]
     },
     {
       "name": "Liam Nguyen",
       "age": 28,
+      "gender": "men",
       "short_description": "System Analyst",
       "current_setting": "Head Office",
       "short_scenario": "Liam analyzes business needs and refines system processes for optimal performance.",
@@ -352,70 +565,122 @@
           "answer_found": "Utilize the analysis tools provided.",
           "manual_reference": ["Analysis tool info"],
           "answered": true,
-          "satisfaction": 0.92
+          "satisfaction": 0.92,
+          "comment": "The analysis tools provide comprehensive metrics and visualizations.",
+          "improvement_suggestions": [
+            "Provide more details on the analysis tool steps",
+            "Explain common issues during system performance analysis",
+            "Include troubleshooting for system performance analysis failures"
+          ]
         },
         {
           "question": "How do I generate performance reports?",
           "answer_found": "Run the report generator.",
           "manual_reference": ["Reporting tool"],
           "answered": false,
-          "satisfaction": 0.85
+          "satisfaction": 0.85,
+          "comment": "Report generator options should be better explained.",
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for generating performance reports",
+            "Explain different performance report generation options",
+            "Include troubleshooting for performance report generation issues"
+          ]
         },
         {
           "question": "How do I integrate with external APIs?",
           "answer_found": "Follow the API integration steps.",
           "manual_reference": ["API integration guide"],
           "answered": true,
-          "satisfaction": 0.90
+          "satisfaction": 0.90,
+          "improvement_suggestions": [
+            "Provide more details on the API integration steps",
+            "Explain common issues during external API integration",
+            "Include troubleshooting for external API integration failures"
+          ]
         },
         {
           "question": "How do I optimize system processes?",
           "answer_found": "Adjust parameters based on usage metrics.",
           "manual_reference": ["Optimization guide"],
           "answered": false,
-          "satisfaction": 0.88
+          "satisfaction": 0.88,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for optimizing system processes",
+            "Explain different system process optimization options",
+            "Include troubleshooting for system process optimization issues"
+          ]
         },
         {
           "question": "How do I monitor resource usage?",
           "answer_found": "View resources on the analytics dashboard.",
           "manual_reference": ["Analytics dashboard"],
           "answered": true,
-          "satisfaction": 0.91
+          "satisfaction": 0.91,
+          "improvement_suggestions": [
+            "Provide more details on the information displayed in the analytics dashboard",
+            "Explain how to interpret resource usage metrics",
+            "Include troubleshooting for analytics dashboard issues"
+          ]
         },
         {
           "question": "How do I configure system alerts?",
           "answer_found": "Access alert configuration settings.",
           "manual_reference": ["Alert configuration"],
           "answered": false,
-          "satisfaction": 0.86
+          "satisfaction": 0.86,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for configuring system alerts",
+            "Explain different system alert configuration options",
+            "Include troubleshooting for system alert configuration issues"
+          ]
         },
         {
           "question": "How do I audit system logs?",
           "answer_found": "Use the log management tool.",
           "manual_reference": ["Log management"],
           "answered": true,
-          "satisfaction": 0.89
+          "satisfaction": 0.89,
+          "improvement_suggestions": [
+            "Provide more details on the log management tool steps",
+            "Explain common issues during system log auditing",
+            "Include troubleshooting for system log auditing failures"
+          ]
         },
         {
           "question": "How do I update system modules?",
           "answer_found": "Initiate the module update process.",
           "manual_reference": ["Module update guide"],
           "answered": true,
-          "satisfaction": 0.87
+          "satisfaction": 0.87,
+          "improvement_suggestions": [
+            "Provide more details on the module update process steps",
+            "Explain common issues during system module update",
+            "Include troubleshooting for system module update failures"
+          ]
         },
         {
           "question": "How do I run diagnostics?",
           "answer_found": "Select the diagnostics option from the menu.",
           "manual_reference": ["Diagnostics info"],
           "answered": false,
-          "satisfaction": 0.85
+          "satisfaction": 0.85,
+          "improvement_suggestions": [
+            "Provide step-by-step instructions for running diagnostics",
+            "Explain different diagnostics options",
+            "Include troubleshooting for diagnostics issues"
+          ]
         },
         {
-          "question": " How do I export analysis results?",
+          "question": "How do I export analysis results?",
           "answer_found": "Export results using the export function.",
           "manual_reference": ["Export instructions"],
           "answered": true,
-          "satisfaction": 0.90
+          "satisfaction": 0.90,
+          "improvement_suggestions": [
+            "Provide more details on the export function steps",
+            "Explain common issues during analysis result export",
+            "Include troubleshooting for analysis result export failures"
+          ]
         }
       ]
     }
