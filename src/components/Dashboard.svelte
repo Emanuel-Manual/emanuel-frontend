@@ -4,9 +4,6 @@
   import * as Tabs from "$lib/components/ui/tabs";
   import { Button } from "$lib/components/ui/button";
   import { Progress } from "$lib/components/ui/progress";
-  import * as Accordion from "$lib/components/ui/accordion";
-  import * as Avatar from "$lib/components/ui/avatar";
-  import { Separator } from "$lib/components/ui/separator";
   import { createEventDispatcher } from "svelte";
 
   import {
@@ -24,51 +21,24 @@
     ShieldCheck
   } from "lucide-svelte";
 
+  // Import tab components
+  import PersonasTab from "./dashboard-tabs/PersonasTab.svelte";
+  import TechnicalTab from "./dashboard-tabs/TechnicalTab.svelte";
+  import StyleTab from "./dashboard-tabs/StyleTab.svelte";
+  import AccessibilityTab from "./dashboard-tabs/AccessibilityTab.svelte";
+  import ComplianceTab from "./dashboard-tabs/ComplianceTab.svelte";
+  import SuggestionsTab from "./dashboard-tabs/SuggestionsTab.svelte";
+
   // Create event dispatcher
   const dispatch = createEventDispatcher();
 
-  // Function to handle question click
-  function handleQuestionClick(persona, question) {
-    dispatch('questionSelected', { persona, question });
-  }
-
-  // Function to handle suggestion click
-  function handleSuggestionClick(suggestion) {
-    // Find the persona and question that contains this suggestion
-    for (const persona of data.personas) {
-      for (const question of persona.questions) {
-        if (question.improvement_suggestions && 
-            question.improvement_suggestions.includes(suggestion)) {
-          dispatch('questionSelected', { persona, question });
-          return;
-        }
-      }
-    }
+  // Forward events from child components
+  function forwardQuestionSelected(event) {
+    dispatch('questionSelected', event.detail);
   }
 
   // Accept data as a prop
   export let data;
-
-  // Function to get all suggestions from all personas and questions
-  function getAllSuggestions() {
-    const allSuggestions = [];
-    
-    for (const persona of data.personas) {
-      for (const question of persona.questions) {
-        if (question.improvement_suggestions) {
-          for (const suggestion of question.improvement_suggestions) {
-            allSuggestions.push({
-              suggestion,
-              persona,
-              question
-            });
-          }
-        }
-      }
-    }
-    
-    return allSuggestions;
-  }
 </script>
 
 <main>
@@ -157,154 +127,33 @@
 
         <!-- Personas Tab -->
         <Tabs.Content value="personas">
-          <Card.Root class="">
-            <Card.Content>
-              <Accordion.Root class="w-full">
-                {#each data.personas as persona, i}
-                <Accordion.Item value={"item-" + i}>
-                  <Accordion.Trigger>
-                    <div class="flex items-start gap-4 text-left w-full pr-4">
-                      <Avatar.Root>
-                        <Avatar.Image src="https://randomuser.me/api/portraits/{persona.gender}/{i}.jpg" />
-                        <!-- derive initials from first and last name -->
-                        <Avatar.Fallback>
-                          {persona.name.split(' ')[0][0]}{persona.name.split(' ')[1] ? persona.name.split(' ')[1][0] : ''}
-                        </Avatar.Fallback>
-                      </Avatar.Root>
-                      <div class="grid gap-1">
-                        <p class="text-sm font-medium leading-none">{persona.name}</p>
-                        <p class="text-muted-foreground text-sm">{persona.age} Years | {persona.short_description} | {persona.current_setting}</p>
-                      </div>
-                      <div class="ml-auto font-medium bg-gray-200 rounded-full p-2 px-3">
-                        <div class="flex justify-center mx-1">
-                          <Smile class="h-4 w-4" />
-                          <p class="text-xs mx-1">{Math.round(persona.total_satisfaction * 100)}%</p>
-                          <CircleHelp class="ml-5 h-4 w-4" />
-                          <p class="text-xs mx-1">{persona.answered_questions} / {persona.total_questions}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </Accordion.Trigger>
-                  <Accordion.Content>
-                    <div class="w-full rounded bg-gray-100 p-2 mb-2">
-                      {persona.short_scenario}
-                    </div>
-                    {#if persona.questions && persona.questions.length}
-                      {#each persona.questions as question}
-                      <div class="w-full">
-                        <Separator />
-                        <div 
-                          class="flex flex-row justify-start items-center gap-2 hover:bg-gray-100 p-2 cursor-pointer" 
-                          on:click={() => handleQuestionClick(persona, question)}
-                          on:keydown={(e) => e.key === 'Enter' && handleQuestionClick(persona, question)}
-                          tabindex="0"
-                          role="button"
-                          aria-label="Select question: {question.question}"
-                        >
-                          <div class="flex flex-row items-center bg-gray-200 rounded-full w-fit">
-                            {#if question.answered}
-                              <div class="bg-green-200 rounded-full w-fit p-2">
-                                <CircleCheck class="h-4 w-4" />
-                              </div>
-                            {:else}
-                              <div class="bg-red-200 rounded-full w-fit p-2">
-                                <CircleAlert class="h-4 w-4" />
-                              </div>
-                            {/if}
-                            <div class="flex justify-center mx-1">
-                              <Smile class="h-4 w-4" />
-                              <p class="text-xs mx-1">{Math.round(question.satisfaction * 100)}%</p>
-                            </div>
-                          </div>
-                          <div class="text-sm font-medium leading-none">
-                            {question.question}
-                          </div>
-                        </div>
-                      </div>
-                      {/each}
-                    {/if}
-                  </Accordion.Content>
-                </Accordion.Item>
-                {/each}
-              </Accordion.Root>
-            </Card.Content>
-          </Card.Root>
+          <PersonasTab data={data} on:questionSelected={forwardQuestionSelected} />
         </Tabs.Content>
 
         <!-- Technical Tab -->
         <Tabs.Content value="technical">
-          <Card.Root>
-            <Card.Header class="p-4">
-              <Card.Title>Technical</Card.Title>
-              <Card.Description>All technical details.</Card.Description>
-            </Card.Header>
-          </Card.Root>
+          <TechnicalTab />
         </Tabs.Content>
 
         <!-- Writing Style Tab -->
         <Tabs.Content value="style">
-          <Card.Root>
-            <Card.Header class="p-4">
-              <Card.Title>Writing Style</Card.Title>
-              <Card.Description>All writing style guidelines.</Card.Description>
-            </Card.Header>
-          </Card.Root>
+          <StyleTab />
         </Tabs.Content>
 
         <!-- Accessibility Tab -->
         <Tabs.Content value="accessibility">
-          <Card.Root>
-            <Card.Header class="p-4">
-              <Card.Title>Accessibility</Card.Title>
-              <Card.Description>Accessibility features and guidelines.</Card.Description>
-            </Card.Header>
-          </Card.Root>
+          <AccessibilityTab />
         </Tabs.Content>
 
         <!-- Compliance Tab -->
         <Tabs.Content value="compliance">
-          <Card.Root>
-            <Card.Header class="p-4">
-              <Card.Title>Compliance</Card.Title>
-              <Card.Description>Compliance standards and regulations.</Card.Description>
-            </Card.Header>
-          </Card.Root>
+          <ComplianceTab />
         </Tabs.Content>
 
-        <!-- Suggestions Tab (formerly Tips) -->
+        <!-- Suggestions Tab -->
         <Tabs.Content value="suggestions">
-          <Card.Root>
-            <Card.Header class="p-4">
-              <Card.Title>Suggestions</Card.Title>
-              <Card.Description>All suggestions for manual improvement.</Card.Description>
-            </Card.Header>
-            <Card.Content>
-              <div class="grid gap-4">
-                {#each getAllSuggestions() as suggestionItem}
-                  <div class="w-full">
-                    <div 
-                      class="flex flex-row justify-start items-center gap-2 hover:bg-gray-100 p-2 cursor-pointer" 
-                      on:click={() => handleQuestionClick(suggestionItem.persona, suggestionItem.question)}
-                      on:keydown={(e) => e.key === 'Enter' && handleQuestionClick(suggestionItem.persona, suggestionItem.question)}
-                      tabindex="0"
-                      role="button"
-                      aria-label="Select suggestion: {suggestionItem.suggestion}"
-                    >
-                      <div class="text-sm font-medium leading-none">
-                        {suggestionItem.suggestion}
-                      </div>
-                      <div class="ml-auto text-xs text-muted-foreground">
-                        {suggestionItem.persona.name} - {suggestionItem.question.question.length > 40 ? suggestionItem.question.question.substring(0, 40) + '...' : suggestionItem.question.question}
-                      </div>
-                    </div>
-                    <Separator />
-                  </div>
-                {/each}
-              </div>
-            </Card.Content>
-          </Card.Root>
+          <SuggestionsTab data={data} on:questionSelected={forwardQuestionSelected} />
         </Tabs.Content>
-
       </Tabs.Root>
     </div>
   </div>
