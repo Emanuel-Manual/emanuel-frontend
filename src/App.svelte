@@ -131,6 +131,13 @@
     function openFileDialog() {
         fileInput.click();
     }
+
+    // Function to skip loading and complete immediately
+    function skipLoading() {
+        loadingProgress = 100;
+        isLoading = false;
+        hasPdf = true;
+    }
 </script>
 
 <main class="relative h-screen">
@@ -243,13 +250,21 @@
     
     <!-- Loading overlay -->
     {#if isLoading}
-        <div class="fixed inset-0 bg-black bg-opacity-70 z-50 flex flex-col items-center justify-center">
+        <div 
+            class="fixed inset-0 bg-black bg-opacity-70 z-50 flex flex-col items-center justify-center cursor-pointer"
+            on:click={skipLoading}
+            on:keydown={(e) => e.key === 'Enter' && skipLoading()}
+            tabindex="0"
+            role="button"
+            aria-label="Click to skip loading"
+        >
             <div class="max-w-md w-full bg-white p-8 rounded-lg">
                 <h2 class="text-xl font-semibold mb-4 text-center">Analyzing PDF Manual</h2>
                 
                 <Progress value={loadingProgress} class="h-2 mb-6" />
                 
                 <p class="text-center text-gray-600 italic">{loadingMessage}</p>
+                
             </div>
         </div>
     {/if}
@@ -320,7 +335,7 @@
         max-height: 20vh;
         overflow-y: auto;
         border-left: 4px solid #1890ff;
-    }
+         }
     
     .improvements-title {
         font-weight: bold;
