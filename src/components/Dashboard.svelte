@@ -35,7 +35,7 @@
 </script>
 
 <main>
-  <div class=" min-h-screen bg-gray-100 p-4">
+  <div class="h-screen overflow-scroll bg-gray-100 p-4">
     <div class="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-2">
       <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
         <!-- General Overview Card -->

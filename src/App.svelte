@@ -29,7 +29,7 @@
     }
 </script>
 
-<main class="relative">
+<main class="relative h-screen">
     <img src="logo.png" alt="" class="absolute z-50 top-0 left-0 w-40 p-4" />
     <Resizable.PaneGroup direction="horizontal">
       <Resizable.Pane class="relative h-full overflow-hidden">
@@ -82,7 +82,7 @@
       </Resizable.Pane>
       <Resizable.Handle />
       <Resizable.Pane>
-        <Dashboard data={dashboardData} on:questionSelected={handleQuestionSelected} />
+        <Dashboard data={dashboardData} class="h-fit" on:questionSelected={handleQuestionSelected} />
       </Resizable.Pane>
     </Resizable.PaneGroup>
 </main>
