@@ -5,7 +5,7 @@
     import PdfView from "./components/PdfView.svelte";
     import * as Resizable from "$lib/components/ui/resizable";
     import { Separator } from "$lib/components/ui/separator";
-    import { CircleCheck, CircleAlert, Smile } from "lucide-svelte";
+    import { CircleCheck, CircleAlert, Smile, ChevronUp, ChevronDown } from "lucide-svelte";
     
     // Import the dashboard data
     import dashboardData from "./assets/dashboardData.json";
@@ -14,6 +14,7 @@
     let selectedPersona = null;
     let selectedQuestion = null;
     let highlightInfo = null;
+    let isMinimized = false;
     
     // Handle question selection
     function handleQuestionSelected(event) {
@@ -27,6 +28,11 @@
         highlightInfo = event.detail;
         console.log("Highlight complete:", highlightInfo);
     }
+    
+    // Toggle between minimized and maximized states
+    function toggleMinimize() {
+        isMinimized = !isMinimized;
+    }
 </script>
 
 <main class="relative h-screen">
@@ -34,9 +40,17 @@
     <Resizable.PaneGroup direction="horizontal">
       <Resizable.Pane class="relative h-full overflow-hidden">
         {#if selectedQuestion}
-        <div class="absolute bottom-0 z-50 w-full p-4  ">
-          <div class="items-center gap-4 p-10 bg-white rounded-lg shadow-lg border-2  question-info">
-            <div class="flex flex-row ">
+        <div class="absolute bottom-0 z-50 w-full p-4">
+          <div class={`items-center gap-4 p-10 bg-white rounded-lg shadow-lg border-2 question-info ${isMinimized ? 'minimized' : 'maximized'}`}>
+            <button class="absolute right-2 transform top-2 p-1 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors" on:click={toggleMinimize}>
+              {#if isMinimized}
+                <ChevronUp class="h-5 w-5" />
+              {:else}
+                <ChevronDown class="h-5 w-5" />
+              {/if}
+            </button>
+            
+            <div class="flex flex-row">
                 <div class="flex-1">
                     <div class="question">{selectedQuestion.question}</div>
                     {#if selectedQuestion.answer_found}
@@ -50,7 +64,7 @@
                 </div>
                 
                 <div class="status-indicators p-5">
-                    <div class="flex flex-row items-center  gap-2">
+                    <div class="flex flex-row items-center gap-2">
                         {#if selectedQuestion.answered}
                             <div class="bg-green-200 rounded-full w-fit p-2">
                                 <CircleCheck class="h-5 w-5" />
@@ -99,7 +113,19 @@
 <style>
     .question-info {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-
+        transition: max-height 0.3s ease;
+        position: relative;
+        overflow-y: auto;
+    }
+    
+    .question-info.minimized {
+        max-height: 10vh;
+        overflow-y: auto;
+    }
+    
+    .question-info.maximized {
+        max-height: 60vh;
+        overflow-y: auto;
     }
     
     .question {
@@ -146,7 +172,6 @@
         background-color: #e6f7ff;
         padding: 10px;
         border-radius: 4px;
-       
         max-height: 20vh;
         overflow-y: auto;
         border-left: 4px solid #1890ff;
