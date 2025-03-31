@@ -25,14 +25,16 @@
           "answer_found": "Press the power button on the front panel.",
           "manual_reference": ["Aufnahme vom TechniSat"],
           "answered": true,
-          "satisfaction": 0.77
+          "satisfaction": 0.77,
+          "comment": "The power button is clearly labeled on the front panel."
         },
         {
           "question": "How do I adjust the volume?",
           "answer_found": "Use the volume knob.",
           "manual_reference": ["Zunächst muss ein weiterer"],
           "answered": false,
-          "satisfaction": 0.22
+          "satisfaction": 0.22,
+          "comment": "Volume adjustment needs more detailed instructions."
         },
         {
           "question": "How do I reset the system?",
@@ -108,14 +110,16 @@
           "answer_found": "Follow the startup protocol.",
           "manual_reference": ["Startup protocol"],
           "answered": true,
-          "satisfaction": 0.85
+          "satisfaction": 0.85,
+          "comment": "The startup protocol is well documented in the manual."
         },
         {
           "question": "How do I access the dashboard?",
           "answer_found": "Login and navigate to the dashboard.",
           "manual_reference": ["Dashboard login"],
           "answered": true,
-          "satisfaction": 0.90
+          "satisfaction": 0.90,
+          "comment": "Dashboard access is straightforward with clear login instructions."
         },
         {
           "question": "How do I update API endpoints?",
@@ -191,14 +195,16 @@
           "answer_found": "Use the network monitor tool.",
           "manual_reference": ["Network monitor"],
           "answered": true,
-          "satisfaction": 0.80
+          "satisfaction": 0.80,
+          "comment": "The network monitor tool is intuitive and easy to use."
         },
         {
           "question": "How do I restart routers?",
           "answer_found": "Restart via the admin panel.",
           "manual_reference": ["Admin panel"],
           "answered": false,
-          "satisfaction": 0.65
+          "satisfaction": 0.65,
+          "comment": "The admin panel location should be more clearly specified."
         },
         {
           "question": "How do I configure network switches?",
@@ -274,14 +280,16 @@
           "answer_found": "Click on the design toggle.",
           "manual_reference": ["Design toggle info"],
           "answered": true,
-          "satisfaction": 0.90
+          "satisfaction": 0.90,
+          "comment": "Design toggle is prominently displayed in the interface."
         },
         {
           "question": "How do I preview layouts?",
           "answer_found": "Use the preview button.",
           "manual_reference": ["Preview instructions"],
           "answered": true,
-          "satisfaction": 0.85
+          "satisfaction": 0.85,
+          "comment": "Preview functionality works well but could load faster."
         },
         {
           "question": "How do I export prototypes?",
@@ -357,14 +365,16 @@
           "answer_found": "Utilize the analysis tools provided.",
           "manual_reference": ["Analysis tool info"],
           "answered": true,
-          "satisfaction": 0.92
+          "satisfaction": 0.92,
+          "comment": "The analysis tools provide comprehensive metrics and visualizations."
         },
         {
           "question": "How do I generate performance reports?",
           "answer_found": "Run the report generator.",
           "manual_reference": ["Reporting tool"],
           "answered": false,
-          "satisfaction": 0.85
+          "satisfaction": 0.85,
+          "comment": "Report generator options should be better explained."
         },
         {
           "question": "How do I integrate with external APIs?",

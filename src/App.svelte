@@ -41,12 +41,9 @@
                     {#if selectedQuestion.answer_found}
                     <div class="answer">Answer: {selectedQuestion.answer_found}</div>
                     {/if}
-                    {#if selectedQuestion.manual_reference && selectedQuestion.manual_reference.length}
-                    <div class="reference">
-                        <span class="reference-label">Manual Reference:</span>
-                        {#each selectedQuestion.manual_reference as ref, i}
-                            <span class="reference-item">{ref}{i < selectedQuestion.manual_reference.length - 1 ? ', ' : ''}</span>
-                        {/each}
+                    {#if selectedQuestion.comment}
+                    <div class="comment-box">
+                        <p class="comment-text">"<em><strong>{selectedQuestion.comment}</strong></em>"</p>
                     </div>
                     {/if}
                 </div>
@@ -119,6 +116,18 @@
     
     .status-indicators {
         min-width: 200px;
+    }
+    
+    .comment-box {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+    
+    .comment-text {
+        color: #444;
+        margin: 0;
     }
 </style>
 
