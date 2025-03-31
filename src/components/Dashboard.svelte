@@ -30,8 +30,43 @@
     dispatch('questionSelected', { persona, question });
   }
 
+  // Function to handle suggestion click
+  function handleSuggestionClick(suggestion) {
+    // Find the persona and question that contains this suggestion
+    for (const persona of data.personas) {
+      for (const question of persona.questions) {
+        if (question.improvement_suggestions && 
+            question.improvement_suggestions.includes(suggestion)) {
+          dispatch('questionSelected', { persona, question });
+          return;
+        }
+      }
+    }
+  }
+
   // Accept data as a prop
   export let data;
+
+  // Function to get all suggestions from all personas and questions
+  function getAllSuggestions() {
+    const allSuggestions = [];
+    
+    for (const persona of data.personas) {
+      for (const question of persona.questions) {
+        if (question.improvement_suggestions) {
+          for (const suggestion of question.improvement_suggestions) {
+            allSuggestions.push({
+              suggestion,
+              persona,
+              question
+            });
+          }
+        }
+      }
+    }
+    
+    return allSuggestions;
+  }
 </script>
 
 <main>
@@ -103,9 +138,9 @@
               <PenLine class="mr-2 h-4 w-4 my-1" />
               Writing Style
             </Tabs.Trigger>
-            <Tabs.Trigger class="px-4" value="tips">
+            <Tabs.Trigger class="px-4" value="suggestions">
               <BadgeInfo class="mr-2 h-4 w-4 my-1" />
-              Tips
+              Suggestions
             </Tabs.Trigger>
           </Tabs.List>
         </div>
@@ -206,13 +241,37 @@
           </Card.Root>
         </Tabs.Content>
 
-        <!-- Tips Tab -->
-        <Tabs.Content value="tips">
+        <!-- Suggestions Tab (formerly Tips) -->
+        <Tabs.Content value="suggestions">
           <Card.Root>
             <Card.Header class="p-4">
-              <Card.Title>Tips</Card.Title>
-              <Card.Description>All tips and tricks.</Card.Description>
+              <Card.Title>Suggestions</Card.Title>
+              <Card.Description>All suggestions for manual improvement.</Card.Description>
             </Card.Header>
+            <Card.Content>
+              <div class="grid gap-4">
+                {#each getAllSuggestions() as suggestionItem}
+                  <div class="w-full">
+                    <div 
+                      class="flex flex-row justify-start items-center gap-2 hover:bg-gray-100 p-2 cursor-pointer" 
+                      on:click={() => handleQuestionClick(suggestionItem.persona, suggestionItem.question)}
+                      on:keydown={(e) => e.key === 'Enter' && handleQuestionClick(suggestionItem.persona, suggestionItem.question)}
+                      tabindex="0"
+                      role="button"
+                      aria-label="Select suggestion: {suggestionItem.suggestion}"
+                    >
+                      <div class="text-sm font-medium leading-none">
+                        {suggestionItem.suggestion}
+                      </div>
+                      <div class="ml-auto text-xs text-muted-foreground">
+                        {suggestionItem.persona.name} - {suggestionItem.question.question.length > 40 ? suggestionItem.question.question.substring(0, 40) + '...' : suggestionItem.question.question}
+                      </div>
+                    </div>
+                    <Separator />
+                  </div>
+                {/each}
+              </div>
+            </Card.Content>
           </Card.Root>
         </Tabs.Content>
 
