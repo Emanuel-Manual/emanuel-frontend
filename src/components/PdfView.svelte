@@ -14,6 +14,7 @@
         if (!searchTerm) return;
         
         const term = searchTerm.toLowerCase();
+        let found = false;
         
         for(const t of text.items) {
             if("str" in t && t.str.toLowerCase().includes(term)) {
@@ -25,9 +26,23 @@
                 [x, y, w, h] = viewport.convertToViewportRectangle([x, y, x + t.width, y + t.height]);
                 ctx.fillRect(x - padding, y + padding, w - x + 2.0*padding, h - y - 2.0*padding);
                 ctx.restore();
+                
+                // Return the first occurrence for scrolling
+                if (!found) {
+                    found = true;
+                    return {
+                        element: ctx.canvas,
+                        position: y
+                    };
+                }
             }
         }
+        return null;
     }
+    
+    // Custom event dispatcher to inform App when highlighting is complete
+    import { createEventDispatcher } from 'svelte';
+    const dispatch = createEventDispatcher();
     
     // Watch for changes in the selected question
     $effect(() => {
@@ -46,6 +61,8 @@
         let scale = window.devicePixelRatio ?? 1;
         let doc = await p.getDocument(a).promise;
         pages = [];
+        
+        let firstHighlight = null;
         
         for(let i = 0; i < doc.numPages; i++) {
             let canvas = document.createElement("canvas");
@@ -69,23 +86,46 @@
             
             // Highlight search terms if we have a selected question
             if (searchTerm) {
-                highlightSearchTerms(ctx, viewport, text, searchTerm);
+                const highlight = highlightSearchTerms(ctx, viewport, text, searchTerm);
+                if (highlight && !firstHighlight) {
+                    firstHighlight = highlight;
+                }
                 
                 // Also highlight terms from the answer if available
                 if (selectedQuestion.answer_found) {
-                    highlightSearchTerms(ctx, viewport, text, selectedQuestion.answer_found);
+                    const answerHighlight = highlightSearchTerms(ctx, viewport, text, selectedQuestion.answer_found);
+                    if (answerHighlight && !firstHighlight) {
+                        firstHighlight = answerHighlight;
+                    }
                 }
                 
                 // Highlight manual references if available
                 if (selectedQuestion.manual_reference && selectedQuestion.manual_reference.length) {
-                    selectedQuestion.manual_reference.forEach(ref => {
-                        highlightSearchTerms(ctx, viewport, text, ref);
-                    });
+                    for (const ref of selectedQuestion.manual_reference) {
+                        const refHighlight = highlightSearchTerms(ctx, viewport, text, ref);
+                        if (refHighlight && !firstHighlight) {
+                            firstHighlight = refHighlight;
+                        }
+                    }
                 }
             }
             
             container.append(canvas);
             pages = [...pages, [page, canvas, text]];
+        }
+        
+        // Scroll to the first highlight if found
+        if (firstHighlight) {
+            setTimeout(() => {
+                firstHighlight.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                dispatch('highlightComplete', { 
+                    found: true,
+                    element: firstHighlight.element,
+                    position: firstHighlight.position
+                });
+            }, 200); // Small delay to ensure DOM is updated
+        } else {
+            dispatch('highlightComplete', { found: false });
         }
     }
     
@@ -97,14 +137,6 @@
 
 <div class="viewer">
     <div class="container" bind:this={container}></div>
-    {#if selectedQuestion}
-    <div class="question-info">
-        <div class="question">{selectedQuestion.question}</div>
-        {#if selectedQuestion.answer_found}
-        <div class="answer">Answer: {selectedQuestion.answer_found}</div>
-        {/if}
-    </div>
-    {/if}
 </div>
 
 <style>
@@ -116,24 +148,6 @@
 }
 :global(.pdf-display) {
     width: 100%;
-}
-.question-info {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-}
-.question {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.answer {
-    color: #555;
 }
 </style>
 
