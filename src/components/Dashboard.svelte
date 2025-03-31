@@ -12,6 +12,7 @@
     BadgeInfo,
     CircleAlert,
     CircleCheck,
+    CircleHelp,
     Cpu,
     FilePen,
     Languages,
@@ -38,7 +39,9 @@
         current_setting: "At home",
         short_scenario:
           "Beate is a 55-year-old non-technical user who uses the DigiFunk 1 system at home. She is not very tech-savvy and needs a simple and intuitive interface to operate the system. Beate is looking for a user-friendly manual that can help her understand the basic functions of the system without overwhelming her with technical jargon.",
-
+        answered_questions: 55,
+        total_questions: 77,
+        total_satisfaction: 0.77,
         questions: [
           {
             question: "How do I turn on the system?",
@@ -202,11 +205,22 @@
                       <div
                         class="ml-auto font-medium bg-gray-200 rounded-full p-2 px-3"
                       >
-                        55 / 77 Questions Answered
+                      <div class="flex justify-center mx-1">
+                        <Smile class="h-4 w-4" />
+                        <p class="text-xs mx-1">22%</p>
+                   
+                        <CircleHelp class="ml-5 h-4 w-4" />
+                        <p class="text-xs mx-1">55 / 77</p>
+                      </div>
+                      
                       </div>
                     </div>
                   </Accordion.Trigger>
                   <Accordion.Content>
+                    <div class="w-full rounded bg-gray-100 p-2 mb-2">
+                      Beate is a 55-year-old non-technical user who uses the DigiFunk 1 system at home. She is not very tech-savvy and needs a simple and intuitive interface to operate the system. Beate is looking for a user-friendly manual that can help her understand the basic functions of the system without overwhelming her with technical jargon.
+
+                    </div>
                     <div class="w-full">
                       <Separator />
                       <div
