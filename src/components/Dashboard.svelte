@@ -20,6 +20,8 @@
     PenLine,
     Smile,
     Users,
+    Sun,
+    ShieldCheck
   } from "lucide-svelte";
 
   // Create event dispatcher
@@ -126,19 +128,27 @@
       <Tabs.Root value="personas">
         <div class="flex">
           <Tabs.List>
-            <Tabs.Trigger class="px-4" value="personas">
+            <Tabs.Trigger class="px-2" value="personas">
               <Users class="mr-2 h-4 w-4 my-1" />
               Personas
             </Tabs.Trigger>
-            <Tabs.Trigger class="px-4" value="technical">
+            <Tabs.Trigger class="px-2" value="technical">
               <Cpu class="mr-2 h-4 w-4 my-1" />
               Technical
             </Tabs.Trigger>
-            <Tabs.Trigger class="px-4" value="style">
+            <Tabs.Trigger class="px-2" value="style">
               <PenLine class="mr-2 h-4 w-4 my-1" />
-              Writing Style
+              Style
             </Tabs.Trigger>
-            <Tabs.Trigger class="px-4" value="suggestions">
+            <Tabs.Trigger class="px-2" value="accessibility">
+              <Sun class="mr-2 h-4 w-4 my-1" />
+              Accessibility
+            </Tabs.Trigger>
+            <Tabs.Trigger class="px-2" value="compliance">
+              <ShieldCheck class="mr-2 h-4 w-4 my-1" />
+              Compliance
+            </Tabs.Trigger>
+            <Tabs.Trigger class="px-2" value="suggestions">
               <BadgeInfo class="mr-2 h-4 w-4 my-1" />
               Suggestions
             </Tabs.Trigger>
@@ -237,6 +247,26 @@
             <Card.Header class="p-4">
               <Card.Title>Writing Style</Card.Title>
               <Card.Description>All writing style guidelines.</Card.Description>
+            </Card.Header>
+          </Card.Root>
+        </Tabs.Content>
+
+        <!-- Accessibility Tab -->
+        <Tabs.Content value="accessibility">
+          <Card.Root>
+            <Card.Header class="p-4">
+              <Card.Title>Accessibility</Card.Title>
+              <Card.Description>Accessibility features and guidelines.</Card.Description>
+            </Card.Header>
+          </Card.Root>
+        </Tabs.Content>
+
+        <!-- Compliance Tab -->
+        <Tabs.Content value="compliance">
+          <Card.Root>
+            <Card.Header class="p-4">
+              <Card.Title>Compliance</Card.Title>
+              <Card.Description>Compliance standards and regulations.</Card.Description>
             </Card.Header>
           </Card.Root>
         </Tabs.Content>
