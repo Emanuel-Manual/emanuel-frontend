@@ -22,14 +22,14 @@
         {
           "question": "How do I turn on the system?",
           "answer_found": "Press the power button on the front panel.",
-          "manual_reference": ["Front panel info"],
+          "manual_reference": ["Aufnahme vom TechniSat"],
           "answered": true,
           "satisfaction": 0.77
         },
         {
           "question": "How do I adjust the volume?",
           "answer_found": "Use the volume knob.",
-          "manual_reference": ["Volume knob details"],
+          "manual_reference": ["Zunächst muss ein weiterer"],
           "answered": false,
           "satisfaction": 0.22
         },

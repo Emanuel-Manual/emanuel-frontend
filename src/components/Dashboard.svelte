@@ -7,6 +7,7 @@
   import * as Accordion from "$lib/components/ui/accordion";
   import * as Avatar from "$lib/components/ui/avatar";
   import { Separator } from "$lib/components/ui/separator";
+  import { createEventDispatcher } from "svelte";
 
   import {
     BadgeInfo,
@@ -20,6 +21,14 @@
     Smile,
     Users,
   } from "lucide-svelte";
+
+  // Create event dispatcher
+  const dispatch = createEventDispatcher();
+
+  // Function to handle question click
+  function handleQuestionClick(persona, question) {
+    dispatch('questionSelected', { persona, question });
+  }
 
   // Accept data as a prop
   export let data;
@@ -139,7 +148,14 @@
                       {#each persona.questions as question}
                       <div class="w-full">
                         <Separator />
-                        <div class="flex flex-row justify-start items-center gap-2 hover:bg-gray-100 p-2">
+                        <div 
+                          class="flex flex-row justify-start items-center gap-2 hover:bg-gray-100 p-2 cursor-pointer" 
+                          on:click={() => handleQuestionClick(persona, question)}
+                          on:keydown={(e) => e.key === 'Enter' && handleQuestionClick(persona, question)}
+                          tabindex="0"
+                          role="button"
+                          aria-label="Select question: {question.question}"
+                        >
                           <div class="flex flex-row items-center bg-gray-200 rounded-full w-fit">
                             {#if question.answered}
                               <div class="bg-green-200 rounded-full w-fit p-2">
