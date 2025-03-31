@@ -10,6 +10,7 @@
 </script>
 
 <main>
+    <img src="logo.png" alt="" class="absolute z-50 top-0 left-0 w-40 p-4" />
     <Resizable.PaneGroup direction="horizontal">
       <Resizable.Pane><PdfView/></Resizable.Pane>
       <Resizable.Handle />
