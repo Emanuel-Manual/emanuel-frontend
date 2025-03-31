@@ -46,6 +46,16 @@
                         <p class="comment-text">"<em><strong>{selectedQuestion.comment}</strong></em>"</p>
                     </div>
                     {/if}
+                    {#if selectedQuestion.improvement_suggestions && selectedQuestion.improvement_suggestions.length}
+                    <div class="improvements-box">
+                        <h4 class="improvements-title">Improvement Suggestions:</h4>
+                        <ul class="improvements-list">
+                            {#each selectedQuestion.improvement_suggestions as suggestion}
+                                <li class="improvement-item">{suggestion}</li>
+                            {/each}
+                        </ul>
+                    </div>
+                    {/if}
                 </div>
                 
                 <div class="status-indicators">
@@ -128,6 +138,33 @@
     .comment-text {
         color: #444;
         margin: 0;
+    }
+    
+    .improvements-box {
+        background-color: #e6f7ff;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 10px;
+        max-height: 20vh;
+        overflow-y: auto;
+        border-left: 4px solid #1890ff;
+    }
+    
+    .improvements-title {
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 8px;
+        color: #1890ff;
+    }
+    
+    .improvements-list {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin: 0;
+    }
+    
+    .improvement-item {
+        margin-bottom: 4px;
     }
 </style>
 
