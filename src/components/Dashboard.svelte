@@ -5,7 +5,6 @@
 <style>
   /* Dashboard component styles go here */
 </style>
-// use tailwindcss
 <main>
     <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
         <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
