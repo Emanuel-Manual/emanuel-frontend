@@ -1,12 +1,12 @@
 {
   "general": {
-    "title": "DigiFunk 1",
-    "subtitle": "2,4 GHz Funkübertragungssystem",
-    "languages": "Deutsch, Englisch",
-    "pages": "356",
-    "score": 89,
-    "tests": 256,
-    "tests_passed": 134
+    "title": "TS CONNECT und SH Zentraleinheit Bedienungsanleitung",
+    "subtitle": "TechniSat CONNECT App und Smart Home Zentraleinheit",
+    "languages": "Deutsch",
+    "pages": "24",
+    "score": 88,
+    "tests": 130,
+    "tests_passed": 105
   },
   "personas": [
     {
@@ -21,665 +21,510 @@
       "total_satisfaction": 0.77,
       "questions": [
         {
-          "question": "How do I turn on the system?",
-          "answer_found": "Press the power button on the front panel.",
-          "manual_reference": ["Aufnahme vom TechniSat"],
-          "answered": true,
-          "satisfaction": 0.77,
-          "comment": "The power button is clearly labeled on the front panel.",
-          "improvement_suggestions": [
-            "Add a diagram showing the power button location",
-            "Include troubleshooting for when power button doesn't respond",
-            "Add information about standby mode indicators"
-          ]
-        },
-        {
-          "question": "How do I adjust the volume?",
-          "answer_found": "Use the volume knob.",
-          "manual_reference": ["Zunächst muss ein weiterer"],
-          "answered": false,
-          "satisfaction": 0.22,
-          "comment": "Volume adjustment needs more detailed instructions.",
-          "improvement_suggestions": [
-            "Specify the exact location of the volume knob",
-            "Explain minimum and maximum volume settings",
-            "Add information about mute functionality"
-          ]
-        },
-        {
-          "question": "How do I reset the system?",
-          "answer_found": "Press and hold the reset button for 5 seconds.",
-          "manual_reference": ["Reset button info"],
-          "answered": false,
-          "satisfaction": 0.5,
-          "improvement_suggestions": [
-            "Clarify where the reset button is located",
-            "Explain what happens during a reset",
-            "Include when a reset should be performed"
-          ]
-        },
-        {
-          "question": "How do I connect to Wi-Fi?",
-          "answer_found": "Go to settings and select Wi-Fi.",
-          "manual_reference": ["Wi-Fi settings"],
-          "answered": false,
-          "satisfaction": 0.5,
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for connecting to Wi-Fi",
-            "Explain different Wi-Fi security options",
-            "Include troubleshooting for Wi-Fi connection issues"
-          ]
-        },
-        {
-          "question": "How do I update the firmware?",
-          "answer_found": "Connect to the internet and follow instructions.",
-          "manual_reference": ["Firmware update guide"],
-          "answered": false,
-          "satisfaction": 0.5,
-          "improvement_suggestions": [
-            "Clarify where to find firmware update instructions",
-            "Explain the benefits of updating firmware",
-            "Include troubleshooting for firmware update failures"
-          ]
-        },
-        {
-          "question": "How do I check system status?",
-          "answer_found": "Navigate to the status tab.",
-          "manual_reference": ["Status tab"],
-          "answered": true,
-          "satisfaction": 0.80,
-          "improvement_suggestions": [
-            "Provide more details on the information displayed in the status tab",
-            "Explain how to interpret system status indicators",
-            "Include troubleshooting for system status issues"
-          ]
-        },
-        {
-          "question": "How do I troubleshoot errors?",
-          "answer_found": "Refer to the troubleshooting guide.",
-          "manual_reference": ["Troubleshooting guide"],
-          "answered": false,
-          "satisfaction": 0.60,
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for common error troubleshooting",
-            "Explain how to access the troubleshooting guide",
-            "Include troubleshooting for specific error codes"
-          ]
-        },
-        {
-          "question": "How do I configure network settings?",
-          "answer_found": "Access the network settings via the system menu.",
-          "manual_reference": ["Network settings"],
-          "answered": false,
-          "satisfaction": 0.50,
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for configuring network settings",
-            "Explain different network configuration options",
-            "Include troubleshooting for network configuration issues"
-          ]
-        },
-        {
-          "question": "How do I view log files?",
-          "answer_found": "Logs can be viewed in the admin panel.",
-          "manual_reference": ["Admin panel logs"],
-          "answered": true,
-          "satisfaction": 0.70,
-          "improvement_suggestions": [
-            "Provide more details on the information displayed in log files",
-            "Explain how to interpret log file entries",
-            "Include troubleshooting for log file access issues"
-          ]
-        },
-        {
-          "question": "How do I exit the application?",
-          "answer_found": "Click on the exit button.",
-          "manual_reference": ["Exit instructions"],
-          "answered": false,
-          "satisfaction": 0.40,
-          "improvement_suggestions": [
-            "Clarify where the exit button is located",
-            "Explain what happens when the application is exited",
-            "Include troubleshooting for exit button issues"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Alexandra Smith",
-      "age": 30,
-      "gender": "women",
-      "short_description": "Technical Expert",
-      "current_setting": "Office",
-      "short_scenario": "Alexandra is a skilled technical expert working in an office environment, focused on optimizing system performance.",
-      "answered_questions": 40,
-      "total_questions": 50,
-      "total_satisfaction": 0.80,
-      "questions": [
-        {
-          "question": "How do I initialize the server?",
-          "answer_found": "Follow the startup protocol.",
-          "manual_reference": ["Startup protocol"],
+          "question": "How do I activate the Smart Home function on the receiver?",
+          "answer_found": "The manual explains that you must navigate to 'Einstellungen > Sonderfunktionen > Smart Home' and switch the option on.",
+          "manual_reference": ["4.2.3 Räume anlegen und entfernen"],
           "answered": true,
           "satisfaction": 0.85,
-          "comment": "The startup protocol is well documented in the manual.",
+          "comment": "The steps to activate Smart Home are clear but could benefit from visual cues.",
           "improvement_suggestions": [
-            "Provide more details on the startup protocol steps",
-            "Explain common issues during server initialization",
-            "Include troubleshooting for server startup failures"
+            "Include annotated screenshots of the menu.",
+            "Provide a quick-start guide with icons.",
+            "Offer troubleshooting tips if activation fails."
           ]
         },
         {
-          "question": "How do I access the dashboard?",
-          "answer_found": "Login and navigate to the dashboard.",
-          "manual_reference": ["Dashboard login"],
+          "question": "How do I add a new device to the favorites list?",
+          "answer_found": "The instructions indicate that you should select the device from 'Alle Geräte', press the OPT-Taste, and choose 'Als Favorit hinzufügen'.",
+          "manual_reference": ["4.2.1 Geräte zu den Favoriten hinzufügen"],
           "answered": true,
           "satisfaction": 0.90,
-          "comment": "Dashboard access is straightforward with clear login instructions.",
+          "comment": "The process is straightforward and easy to follow.",
           "improvement_suggestions": [
-            "Provide more details on the information displayed in the dashboard",
-            "Explain how to interpret dashboard metrics",
-            "Include troubleshooting for dashboard access issues"
+            "Add a visual diagram of the process.",
+            "List common errors when adding favorites.",
+            "Clarify if multiple devices can be added simultaneously."
           ]
         },
         {
-          "question": "How do I update API endpoints?",
-          "answer_found": "Consult the API documentation.",
-          "manual_reference": ["API docs"],
+          "question": "How can I troubleshoot if a device fails to connect?",
+          "answer_found": "",
+          "manual_reference": [],
           "answered": false,
-          "satisfaction": 0.70,
+          "satisfaction": 0.40,
+          "comment": "The manual lacks a dedicated troubleshooting section for connection issues.",
           "improvement_suggestions": [
-            "Provide step-by-step instructions for updating API endpoints",
-            "Explain different API endpoint configuration options",
-            "Include troubleshooting for API endpoint update issues"
-          ]
-        },
-        {
-          "question": "How do I monitor system performance?",
-          "answer_found": "Use the performance monitoring tool.",
-          "manual_reference": ["Monitoring tool"],
-          "answered": true,
-          "satisfaction": 0.80,
-          "improvement_suggestions": [
-            "Provide more details on the information displayed in the performance monitoring tool",
-            "Explain how to interpret performance metrics",
-            "Include troubleshooting for performance monitoring tool issues"
-          ]
-        },
-        {
-          "question": "How do I reset credentials?",
-          "answer_found": "Follow the reset instructions.",
-          "manual_reference": ["Credential reset guide"],
-          "answered": false,
-          "satisfaction": 0.60,
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for resetting credentials",
-            "Explain different credential reset options",
-            "Include troubleshooting for credential reset issues"
-          ]
-        },
-        {
-          "question": "How do I backup system data?",
-          "answer_found": "Use the backup utility.",
-          "manual_reference": ["Backup instructions"],
-          "answered": true,
-          "satisfaction": 0.85,
-          "improvement_suggestions": [
-            "Provide more details on the backup utility steps",
-            "Explain common issues during system data backup",
-            "Include troubleshooting for system data backup failures"
-          ]
-        },
-        {
-          "question": "How do I restore from backup?",
-          "answer_found": "Follow the restore procedure.",
-          "manual_reference": ["Restore procedure"],
-          "answered": false,
-          "satisfaction": 0.65,
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for restoring from backup",
-            "Explain different restore options",
-            "Include troubleshooting for restore issues"
-          ]
-        },
-        {
-          "question": "How do I configure the firewall?",
-          "answer_found": "Access firewall settings.",
-          "manual_reference": ["Firewall configuration"],
-          "answered": true,
-          "satisfaction": 0.75,
-          "improvement_suggestions": [
-            "Provide more details on the firewall configuration steps",
-            "Explain common issues during firewall configuration",
-            "Include troubleshooting for firewall configuration failures"
-          ]
-        },
-        {
-          "question": "How do I execute a system update?",
-          "answer_found": "Run the system update command.",
-          "manual_reference": ["System update guide"],
-          "answered": false,
-          "satisfaction": 0.70,
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for executing a system update",
-            "Explain different system update options",
-            "Include troubleshooting for system update issues"
-          ]
-        },
-        {
-          "question": "How do I shut down the server?",
-          "answer_found": "Initiate the shutdown sequence.",
-          "manual_reference": ["Shutdown procedure"],
-          "answered": true,
-          "satisfaction": 0.80,
-          "improvement_suggestions": [
-            "Provide more details on the shutdown sequence steps",
-            "Explain common issues during server shutdown",
-            "Include troubleshooting for server shutdown failures"
+            "Include a troubleshooting chapter for connection problems.",
+            "Provide common error codes and their solutions.",
+            "Offer step-by-step diagnostic procedures."
           ]
         }
       ]
     },
     {
-      "name": "John Doe",
-      "age": 40,
+      "name": "Mark Thompson",
+      "age": 45,
       "gender": "men",
-      "short_description": "IT Specialist",
-      "current_setting": "Data Center",
-      "short_scenario": "John manages complex IT networks and ensures smooth operation of all systems.",
-      "answered_questions": 45,
-      "total_questions": 60,
-      "total_satisfaction": 0.75,
+      "short_description": "DIY Enthusiast",
+      "current_setting": "Suburban Home",
+      "short_scenario": "Mark relies on the manual to set up his home automation system and integrate various devices.",
+      "answered_questions": 2,
+      "total_questions": 3,
+      "total_satisfaction": 0.87,
       "questions": [
         {
-          "question": "How do I monitor network traffic?",
-          "answer_found": "Use the network monitor tool.",
-          "manual_reference": ["Network monitor"],
+          "question": "How do I configure the Z-Wave settings for device integration?",
+          "answer_found": "The manual details that Z-Wave settings can be found under '3.2 Z-Wave' and subsequent sub-sections.",
+          "manual_reference": ["Page 3 - Z-Wave settings"],
           "answered": true,
-          "satisfaction": 0.80,
-          "comment": "The network monitor tool is intuitive and easy to use.",
+          "satisfaction": 0.88,
+          "comment": "Z-Wave configuration is well documented but technical.",
           "improvement_suggestions": [
-            "Provide more details on the information displayed in the network monitor tool",
-            "Explain how to interpret network traffic metrics",
-            "Include troubleshooting for network monitor tool issues"
+            "Simplify the language for beginners.",
+            "Add a glossary for technical terms.",
+            "Include visual flowcharts of the configuration process."
           ]
         },
         {
-          "question": "How do I restart routers?",
-          "answer_found": "Restart via the admin panel.",
-          "manual_reference": ["Admin panel"],
-          "answered": false,
-          "satisfaction": 0.65,
-          "comment": "The admin panel location should be more clearly specified.",
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for restarting routers",
-            "Explain different router restart options",
-            "Include troubleshooting for router restart issues"
-          ]
-        },
-        {
-          "question": "How do I configure network switches?",
-          "answer_found": "Setup using the CLI guide.",
-          "manual_reference": ["CLI guide"],
+          "question": "How do I remove a device from the favorites?",
+          "answer_found": "The manual instructs to navigate to 'Alle Geräte', select the device, press the OPT-Taste and choose 'Als Favorit entfernen'.",
+          "manual_reference": ["Page 7 - Favoriten entfernen"],
           "answered": true,
-          "satisfaction": 0.75,
+          "satisfaction": 0.90,
+          "comment": "Instructions for removing favorites are concise.",
           "improvement_suggestions": [
-            "Provide more details on the CLI guide steps",
-            "Explain common issues during network switch configuration",
-            "Include troubleshooting for network switch configuration failures"
+            "Provide a visual indicator when a device is removed.",
+            "Explain what happens to the device in other menus.",
+            "Include troubleshooting tips if removal fails."
           ]
         },
         {
-          "question": "How do I update device firmware?",
-          "answer_found": "Use the firmware update tool.",
-          "manual_reference": ["Firmware update tool"],
+          "question": "How do I update the firmware via the receiver?",
+          "answer_found": "",
+          "manual_reference": [],
           "answered": false,
-          "satisfaction": 0.70,
+          "satisfaction": 0.42,
+          "comment": "There is little information regarding firmware updates in the manual.",
           "improvement_suggestions": [
-            "Provide step-by-step instructions for updating device firmware",
-            "Explain different device firmware update options",
-            "Include troubleshooting for device firmware update issues"
-          ]
-        },
-        {
-          "question": "How do I manage IP configurations?",
-          "answer_found": "Configure via DHCP settings.",
-          "manual_reference": ["DHCP guide"],
-          "answered": true,
-          "satisfaction": 0.85,
-          "improvement_suggestions": [
-            "Provide more details on the DHCP guide steps",
-            "Explain common issues during IP configuration management",
-            "Include troubleshooting for IP configuration management failures"
-          ]
-        },
-        {
-          "question": "How do I access the control panel?",
-          "answer_found": "Login to the control panel.",
-          "manual_reference": ["Control panel access"],
-          "answered": false,
-          "satisfaction": 0.60,
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for accessing the control panel",
-            "Explain different control panel access options",
-            "Include troubleshooting for control panel access issues"
-          ]
-        },
-        {
-          "question": "How do I schedule maintenance?",
-          "answer_found": "Use the scheduling tool.",
-          "manual_reference": ["Maintenance scheduler"],
-          "answered": true,
-          "satisfaction": 0.80,
-          "improvement_suggestions": [
-            "Provide more details on the scheduling tool steps",
-            "Explain common issues during maintenance scheduling",
-            "Include troubleshooting for maintenance scheduling failures"
-          ]
-        },
-        {
-          "question": "How do I view system logs?",
-          "answer_found": "Access logs via the admin section.",
-          "manual_reference": ["Admin logs"],
-          "answered": false,
-          "satisfaction": 0.70,
-          "improvement_suggestions": [
-            "Provide more details on the information displayed in system logs",
-            "Explain how to interpret system log entries",
-            "Include troubleshooting for system log access issues"
-          ]
-        },
-        {
-          "question": "How do I set up error alerts?",
-          "answer_found": "Configure alerts in settings.",
-          "manual_reference": ["Alert settings"],
-          "answered": true,
-          "satisfaction": 0.75,
-          "improvement_suggestions": [
-            "Provide more details on the alert configuration steps",
-            "Explain common issues during error alert setup",
-            "Include troubleshooting for error alert setup failures"
-          ]
-        },
-        {
-          "question": "How do I troubleshoot outages?",
-          "answer_found": "Follow the outage troubleshooting guide.",
-          "manual_reference": ["Outage guide"],
-          "answered": false,
-          "satisfaction": 0.65,
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for troubleshooting outages",
-            "Explain different outage troubleshooting options",
-            "Include troubleshooting for specific outage scenarios"
+            "Include detailed firmware update instructions.",
+            "Mention required cables or connections.",
+            "List the benefits of keeping firmware updated."
           ]
         }
       ]
     },
     {
-      "name": "Maria Garcia",
-      "age": 35,
+      "name": "Sophie Lee",
+      "age": 33,
       "gender": "women",
-      "short_description": "UX Designer",
-      "current_setting": "Remote",
-      "short_scenario": "Maria designs intuitive interfaces and ensures the system is user friendly.",
-      "answered_questions": 50,
-      "total_questions": 70,
+      "short_description": "Tech Novice",
+      "current_setting": "Family Home",
+      "short_scenario": "Sophie uses the manual to understand basic functions and manage her smart devices with minimal technical knowledge.",
+      "answered_questions": 2,
+      "total_questions": 3,
       "total_satisfaction": 0.85,
       "questions": [
         {
-          "question": "How do I activate design mode?",
-          "answer_found": "Click on the design toggle.",
-          "manual_reference": ["Design toggle info"],
-          "answered": true,
-          "satisfaction": 0.90,
-          "comment": "Design toggle is prominently displayed in the interface.",
-          "improvement_suggestions": [
-            "Provide more details on the design toggle steps",
-            "Explain common issues during design mode activation",
-            "Include troubleshooting for design mode activation failures"
-          ]
-        },
-        {
-          "question": "How do I preview layouts?",
-          "answer_found": "Use the preview button.",
-          "manual_reference": ["Preview instructions"],
-          "answered": true,
-          "satisfaction": 0.85,
-          "comment": "Preview functionality works well but could load faster.",
-          "improvement_suggestions": [
-            "Provide more details on the preview button steps",
-            "Explain common issues during layout preview",
-            "Include troubleshooting for layout preview failures"
-          ]
-        },
-        {
-          "question": "How do I export prototypes?",
-          "answer_found": "Select export from the menu.",
-          "manual_reference": ["Export options"],
-          "answered": false,
-          "satisfaction": 0.80,
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for exporting prototypes",
-            "Explain different prototype export options",
-            "Include troubleshooting for prototype export issues"
-          ]
-        },
-        {
-          "question": "How do I collaborate with developers?",
-          "answer_found": "Utilize collaboration tools.",
-          "manual_reference": ["Collaboration guide"],
-          "answered": true,
-          "satisfaction": 0.88,
-          "improvement_suggestions": [
-            "Provide more details on the collaboration tools steps",
-            "Explain common issues during developer collaboration",
-            "Include troubleshooting for developer collaboration failures"
-          ]
-        },
-        {
-          "question": "How do I use design templates?",
-          "answer_found": "Choose a template from the library.",
-          "manual_reference": ["Template library"],
+          "question": "How do I start the TechniSat CONNECT App after installation?",
+          "answer_found": "The manual explains that after installing the app, you simply tap its icon on your device to start it.",
+          "manual_reference": ["Page 5 - App Installation"],
           "answered": true,
           "satisfaction": 0.87,
+          "comment": "Starting the app is simple, though more details could help less-experienced users.",
           "improvement_suggestions": [
-            "Provide more details on the template library steps",
-            "Explain common issues during design template usage",
-            "Include troubleshooting for design template usage failures"
+            "Add screenshots of the app icon.",
+            "Clarify initial setup steps after starting the app.",
+            "Include troubleshooting for app startup issues."
           ]
         },
         {
-          "question": "How do I save my design changes?",
-          "answer_found": "Click the save icon.",
-          "manual_reference": ["Save instructions"],
+          "question": "How do I navigate the menu to find Smart Home settings?",
+          "answer_found": "",
+          "manual_reference": [],
           "answered": false,
-          "satisfaction": 0.80,
+          "satisfaction": 0.40,
+          "comment": "The menu navigation for Smart Home settings is not very intuitive.",
           "improvement_suggestions": [
-            "Provide step-by-step instructions for saving design changes",
-            "Explain different design change save options",
-            "Include troubleshooting for design change save issues"
+            "Include a detailed menu map.",
+            "Highlight the Smart Home section in a diagram.",
+            "Offer step-by-step navigation instructions."
           ]
         },
         {
-          "question": "How do I zoom in/out on designs?",
-          "answer_found": "Use the zoom controls.",
-          "manual_reference": ["Zoom control info"],
+          "question": "How do I change device names in the system?",
+          "answer_found": "The manual states that to rename a device, select it in the menu and choose 'Umbenennen'.",
+          "manual_reference": ["Page 8 - Geräte umbenennen"],
           "answered": true,
-          "satisfaction": 0.85,
+          "satisfaction": 0.83,
+          "comment": "Renaming devices is explained briefly.",
           "improvement_suggestions": [
-            "Provide more details on the zoom control steps",
-            "Explain common issues during design zooming",
-            "Include troubleshooting for design zooming failures"
-          ]
-        },
-        {
-          "question": "How do I reset design layout?",
-          "answer_found": "Click on reset to default.",
-          "manual_reference": ["Reset instructions"],
-          "answered": false,
-          "satisfaction": 0.75,
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for resetting design layout",
-            "Explain different design layout reset options",
-            "Include troubleshooting for design layout reset issues"
-          ]
-        },
-        {
-          "question": "How do I add annotations?",
-          "answer_found": "Use the annotation feature.",
-          "manual_reference": ["Annotation tool"],
-          "answered": true,
-          "satisfaction": 0.90,
-          "improvement_suggestions": [
-            "Provide more details on the annotation feature steps",
-            "Explain common issues during annotation addition",
-            "Include troubleshooting for annotation addition failures"
-          ]
-        },
-        {
-          "question": "How do I share my designs?",
-          "answer_found": "Click on the share option.",
-          "manual_reference": ["Share settings"],
-          "answered": false,
-          "satisfaction": 0.80,
-          "improvement_suggestions": [
-            "Provide step-by-step instructions for sharing designs",
-            "Explain different design sharing options",
-            "Include troubleshooting for design sharing issues"
+            "Provide examples of naming conventions.",
+            "Include a screenshot of the renaming interface.",
+            "Explain what to do if a name conflict occurs."
           ]
         }
       ]
     },
     {
-      "name": "Liam Nguyen",
-      "age": 28,
+      "name": "Carlos Rivera",
+      "age": 52,
       "gender": "men",
-      "short_description": "System Analyst",
-      "current_setting": "Head Office",
-      "short_scenario": "Liam analyzes business needs and refines system processes for optimal performance.",
-      "answered_questions": 30,
-      "total_questions": 40,
-      "total_satisfaction": 0.90,
+      "short_description": "Retired Hobbyist",
+      "current_setting": "Country House",
+      "short_scenario": "Carlos enjoys exploring new technology and uses the manual to understand how to control his smart home devices easily.",
+      "answered_questions": 2,
+      "total_questions": 3,
+      "total_satisfaction": 0.84,
       "questions": [
         {
-          "question": "How do I analyze system performance?",
-          "answer_found": "Utilize the analysis tools provided.",
-          "manual_reference": ["Analysis tool info"],
+          "question": "How do I activate the remote access feature?",
+          "answer_found": "Remote access is activated by enabling the option under 'Fernzugriff' and entering your password.",
+          "manual_reference": ["Page 4 - Fernzugriff"],
           "answered": true,
-          "satisfaction": 0.92,
-          "comment": "The analysis tools provide comprehensive metrics and visualizations.",
-          "improvement_suggestions": [
-            "Provide more details on the analysis tool steps",
-            "Explain common issues during system performance analysis",
-            "Include troubleshooting for system performance analysis failures"
-          ]
-        },
-        {
-          "question": "How do I generate performance reports?",
-          "answer_found": "Run the report generator.",
-          "manual_reference": ["Reporting tool"],
-          "answered": false,
           "satisfaction": 0.85,
-          "comment": "Report generator options should be better explained.",
+          "comment": "The steps for remote access are clear but lack visual support.",
           "improvement_suggestions": [
-            "Provide step-by-step instructions for generating performance reports",
-            "Explain different performance report generation options",
-            "Include troubleshooting for performance report generation issues"
+            "Include a flow diagram for remote access setup.",
+            "List common issues with remote access.",
+            "Provide tips on secure password selection."
           ]
         },
         {
-          "question": "How do I integrate with external APIs?",
-          "answer_found": "Follow the API integration steps.",
-          "manual_reference": ["API integration guide"],
+          "question": "How do I manage connected devices from the Smart Home app?",
+          "answer_found": "The manual explains that you can view and manage devices via the 'Alle Geräte' menu in the app.",
+          "manual_reference": ["Page 4 - Geräte bedienen"],
           "answered": true,
-          "satisfaction": 0.90,
-          "improvement_suggestions": [
-            "Provide more details on the API integration steps",
-            "Explain common issues during external API integration",
-            "Include troubleshooting for external API integration failures"
-          ]
-        },
-        {
-          "question": "How do I optimize system processes?",
-          "answer_found": "Adjust parameters based on usage metrics.",
-          "manual_reference": ["Optimization guide"],
-          "answered": false,
           "satisfaction": 0.88,
+          "comment": "Device management instructions are adequate.",
           "improvement_suggestions": [
-            "Provide step-by-step instructions for optimizing system processes",
-            "Explain different system process optimization options",
-            "Include troubleshooting for system process optimization issues"
+            "Add detailed screenshots of the device list.",
+            "Explain how to filter or sort devices.",
+            "Include a FAQ section for common device management issues."
           ]
         },
         {
-          "question": "How do I monitor resource usage?",
-          "answer_found": "View resources on the analytics dashboard.",
-          "manual_reference": ["Analytics dashboard"],
-          "answered": true,
-          "satisfaction": 0.91,
-          "improvement_suggestions": [
-            "Provide more details on the information displayed in the analytics dashboard",
-            "Explain how to interpret resource usage metrics",
-            "Include troubleshooting for analytics dashboard issues"
-          ]
-        },
-        {
-          "question": "How do I configure system alerts?",
-          "answer_found": "Access alert configuration settings.",
-          "manual_reference": ["Alert configuration"],
+          "question": "How can I reset the Smart Home system?",
+          "answer_found": "",
+          "manual_reference": [],
           "answered": false,
-          "satisfaction": 0.86,
+          "satisfaction": 0.42,
+          "comment": "There is no clear instruction for resetting the system in the manual.",
           "improvement_suggestions": [
-            "Provide step-by-step instructions for configuring system alerts",
-            "Explain different system alert configuration options",
-            "Include troubleshooting for system alert configuration issues"
+            "Provide a dedicated reset procedure.",
+            "Include safety precautions during reset.",
+            "Explain the effects of a system reset on connected devices."
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "Nina Patel",
+      "age": 29,
+      "gender": "women",
+      "short_description": "Graduate Student",
+      "current_setting": "Dorm Room",
+      "short_scenario": "Nina uses the manual to troubleshoot and configure her smart home setup while managing her studies.",
+      "answered_questions": 2,
+      "total_questions": 3,
+      "total_satisfaction": 0.86,
+      "questions": [
         {
-          "question": "How do I audit system logs?",
-          "answer_found": "Use the log management tool.",
-          "manual_reference": ["Log management"],
+          "question": "How do I enroll a new device into the Smart Home network?",
+          "answer_found": "The manual instructs you to use the TechniSat CONNECT App to add a device, then follow the on-screen instructions for 'Neues Gerät anlernen'.",
+          "manual_reference": ["Page 7 - Gerät anlernen"],
           "answered": true,
-          "satisfaction": 0.89,
+          "satisfaction": 0.88,
+          "comment": "Enrollment is well described, though a step-by-step checklist would help.",
           "improvement_suggestions": [
-            "Provide more details on the log management tool steps",
-            "Explain common issues during system log auditing",
-            "Include troubleshooting for system log auditing failures"
+            "Include a checklist of prerequisites before enrollment.",
+            "Add troubleshooting steps if the device is not detected.",
+            "Provide clear visuals of the enrollment screen."
           ]
         },
         {
-          "question": "How do I update system modules?",
-          "answer_found": "Initiate the module update process.",
-          "manual_reference": ["Module update guide"],
+          "question": "How do I view sensor details and battery status?",
+          "answer_found": "Sensor details can be viewed by selecting the sensor and pressing the INFO-Taste.",
+          "manual_reference": ["Page 7 - Sensoren auswerten"],
           "answered": true,
           "satisfaction": 0.87,
+          "comment": "Sensor information is accessible but could be more detailed.",
           "improvement_suggestions": [
-            "Provide more details on the module update process steps",
-            "Explain common issues during system module update",
-            "Include troubleshooting for system module update failures"
+            "Offer examples of sensor readouts.",
+            "Include a dedicated section for battery status information.",
+            "Provide tips on interpreting sensor data."
           ]
         },
         {
-          "question": "How do I run diagnostics?",
-          "answer_found": "Select the diagnostics option from the menu.",
-          "manual_reference": ["Diagnostics info"],
+          "question": "How do I update the app settings for better performance?",
+          "answer_found": "",
+          "manual_reference": [],
           "answered": false,
-          "satisfaction": 0.85,
+          "satisfaction": 0.42,
+          "comment": "The manual does not cover app setting updates in detail.",
           "improvement_suggestions": [
-            "Provide step-by-step instructions for running diagnostics",
-            "Explain different diagnostics options",
-            "Include troubleshooting for diagnostics issues"
+            "Add a section on updating and optimizing app settings.",
+            "Include performance tips.",
+            "Provide screenshots of setting options."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Liam O'Connor",
+      "age": 37,
+      "gender": "men",
+      "short_description": "Freelance Designer",
+      "current_setting": "Co-working Space",
+      "short_scenario": "Liam refers to the manual to quickly understand advanced configuration options that can enhance his workflow.",
+      "answered_questions": 2,
+      "total_questions": 3,
+      "total_satisfaction": 0.85,
+      "questions": [
+        {
+          "question": "How do I customize the dashboard layout in the app?",
+          "answer_found": "The manual explains that you can customize the dashboard by selecting 'Funktionen verwalten' and then adjusting the layout.",
+          "manual_reference": ["Page 5 - Startbildschirm konfigurieren"],
+          "answered": true,
+          "satisfaction": 0.86,
+          "comment": "Dashboard customization is covered adequately.",
+          "improvement_suggestions": [
+            "Provide more examples of layout options.",
+            "Include screenshots of different dashboard views.",
+            "Offer tips for optimal arrangement of widgets."
           ]
         },
         {
-          "question": "How do I export analysis results?",
-          "answer_found": "Export results using the export function.",
-          "manual_reference": ["Export instructions"],
+          "question": "How do I export a configuration report?",
+          "answer_found": "",
+          "manual_reference": [],
+          "answered": false,
+          "satisfaction": 0.40,
+          "comment": "The manual does not mention exporting configuration reports.",
+          "improvement_suggestions": [
+            "Include a section on exporting or saving configurations.",
+            "Explain the benefits of having a configuration report.",
+            "Provide step-by-step instructions if supported."
+          ]
+        },
+        {
+          "question": "How do I access advanced settings for Smart Home devices?",
+          "answer_found": "Advanced settings are accessible via the 'Erweiterte Einstellungen' option in the Smart Home menu.",
+          "manual_reference": ["Page 9 - Erweiterte Z-Wave-Einstellungen"],
+          "answered": true,
+          "satisfaction": 0.84,
+          "comment": "Advanced settings are briefly explained.",
+          "improvement_suggestions": [
+            "Elaborate on each advanced setting.",
+            "Include use cases for different settings.",
+            "Offer troubleshooting for common advanced setting issues."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Emma Fischer",
+      "age": 41,
+      "gender": "women",
+      "short_description": "Small Business Owner",
+      "current_setting": "Office",
+      "short_scenario": "Emma consults the manual to ensure her business’s smart home system is reliable and secure.",
+      "answered_questions": 2,
+      "total_questions": 3,
+      "total_satisfaction": 0.87,
+      "questions": [
+        {
+          "question": "How do I integrate the Smart Home system with my existing network?",
+          "answer_found": "The manual states that the Smart Home Zentraleinheit must be connected via LAN or WLAN and integrated into your home network.",
+          "manual_reference": ["Page 4 - Smart Home am Receiver aktivieren"],
+          "answered": true,
+          "satisfaction": 0.88,
+          "comment": "Network integration is clearly explained.",
+          "improvement_suggestions": [
+            "Provide a network diagram.",
+            "List common compatibility issues.",
+            "Offer troubleshooting tips for network integration."
+          ]
+        },
+        {
+          "question": "How do I secure remote access to the system?",
+          "answer_found": "Remote access security is described on page 4 under 'Fernzugriff', including password setup.",
+          "manual_reference": ["Page 4 - Fernzugriff"],
           "answered": true,
           "satisfaction": 0.90,
+          "comment": "Security settings for remote access are detailed.",
           "improvement_suggestions": [
-            "Provide more details on the export function steps",
-            "Explain common issues during analysis result export",
-            "Include troubleshooting for analysis result export failures"
+            "Include best practices for strong passwords.",
+            "Add a section on two-factor authentication if available.",
+            "Provide guidance on securing network communications."
+          ]
+        },
+        {
+          "question": "How can I reset network settings on the receiver?",
+          "answer_found": "",
+          "manual_reference": [],
+          "answered": false,
+          "satisfaction": 0.42,
+          "comment": "The manual does not cover resetting network settings.",
+          "improvement_suggestions": [
+            "Include a dedicated reset procedure for network settings.",
+            "Detail the consequences of a network reset.",
+            "Offer troubleshooting steps if the reset fails."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Oliver Kim",
+      "age": 24,
+      "gender": "men",
+      "short_description": "Tech-Savvy Student",
+      "current_setting": "Shared Apartment",
+      "short_scenario": "Oliver uses the manual to explore advanced features and customize his smart home experience.",
+      "answered_questions": 2,
+      "total_questions": 3,
+      "total_satisfaction": 0.86,
+      "questions": [
+        {
+          "question": "How do I update the app to the latest version?",
+          "answer_found": "The manual advises to check the App Store for updates and reinstall if necessary.",
+          "manual_reference": ["Page 5 - App Installation"],
+          "answered": true,
+          "satisfaction": 0.85,
+          "comment": "The update process is simple but could include more details.",
+          "improvement_suggestions": [
+            "Mention specific update prompts.",
+            "Include troubleshooting for update failures.",
+            "Provide a version history for reference."
+          ]
+        },
+        {
+          "question": "How do I customize device settings within the app?",
+          "answer_found": "",
+          "manual_reference": [],
+          "answered": false,
+          "satisfaction": 0.40,
+          "comment": "There is little guidance on in-app device customization.",
+          "improvement_suggestions": [
+            "Add detailed customization options with screenshots.",
+            "Explain the impact of different settings.",
+            "Provide examples of common customizations."
+          ]
+        },
+        {
+          "question": "How do I view diagnostic information for the system?",
+          "answer_found": "Diagnostic information is accessible through the 'Details' button for each device, as mentioned on page 8.",
+          "manual_reference": ["Page 8 - Peripheriegeräte bedienen"],
+          "answered": true,
+          "satisfaction": 0.88,
+          "comment": "Diagnostics are available, though not extensively documented.",
+          "improvement_suggestions": [
+            "Include a dedicated diagnostics section.",
+            "Offer guidance on interpreting diagnostic data.",
+            "Provide troubleshooting tips for common diagnostic errors."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Grace Williams",
+      "age": 60,
+      "gender": "women",
+      "short_description": "Senior Citizen",
+      "current_setting": "Retirement Community",
+      "short_scenario": "Grace relies on the manual to understand how to use the smart home system and remain connected with her family.",
+      "answered_questions": 2,
+      "total_questions": 3,
+      "total_satisfaction": 0.85,
+      "questions": [
+        {
+          "question": "How do I operate the Smart Home system easily?",
+          "answer_found": "Basic operation is covered on page 4 and emphasizes using the remote and app for simple tasks.",
+          "manual_reference": ["Page 4 - Smart Home Bedienung"],
+          "answered": true,
+          "satisfaction": 0.86,
+          "comment": "The basic operations are simple but could be more visually supported.",
+          "improvement_suggestions": [
+            "Increase font size and icon clarity.",
+            "Include more images or diagrams.",
+            "Add a quick-start summary for seniors."
+          ]
+        },
+        {
+          "question": "How do I understand the icons used in the manual?",
+          "answer_found": "",
+          "manual_reference": [],
+          "answered": false,
+          "satisfaction": 0.40,
+          "comment": "The legend for icons and symbols is not easily found.",
+          "improvement_suggestions": [
+            "Add a comprehensive legend section.",
+            "Provide examples with explanations.",
+            "Highlight symbols on corresponding pages."
+          ]
+        },
+        {
+          "question": "How do I dispose of outdated devices safely?",
+          "answer_found": "The manual includes disposal guidelines on page 22, explaining proper recycling procedures.",
+          "manual_reference": ["Page 22 - Entsorgungshinweise"],
+          "answered": true,
+          "satisfaction": 0.90,
+          "comment": "Disposal information is thorough and well explained.",
+          "improvement_suggestions": [
+            "Highlight key environmental benefits.",
+            "Include local recycling options.",
+            "Provide safety warnings for handling electronic waste."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ethan Brown",
+      "age": 34,
+      "gender": "men",
+      "short_description": "Gadget Reviewer",
+      "current_setting": "Home Studio",
+      "short_scenario": "Ethan scrutinizes the manual to verify its clarity, detail, and technical accuracy for an unbiased review.",
+      "answered_questions": 2,
+      "total_questions": 3,
+      "total_satisfaction": 0.87,
+      "questions": [
+        {
+          "question": "How do I review the technical specifications of the device?",
+          "answer_found": "Technical details are provided on page 9 in the 'Erweiterte Z-Wave-Einstellungen' section.",
+          "manual_reference": ["Page 9 - Technische Details"],
+          "answered": true,
+          "satisfaction": 0.88,
+          "comment": "The technical specifications are comprehensive.",
+          "improvement_suggestions": [
+            "Include comparison charts with competitor specs.",
+            "Offer detailed benchmark data.",
+            "Provide real-world performance examples."
+          ]
+        },
+        {
+          "question": "How do I test the system performance under load?",
+          "answer_found": "",
+          "manual_reference": [],
+          "answered": false,
+          "satisfaction": 0.40,
+          "comment": "There is little mention of performance testing procedures.",
+          "improvement_suggestions": [
+            "Include a performance testing section.",
+            "Offer step-by-step instructions for load testing.",
+            "Provide sample test results."
+          ]
+        },
+        {
+          "question": "How do I compare the device's functionalities with previous models?",
+          "answer_found": "The manual briefly highlights new functionalities on page 3.",
+          "manual_reference": ["Page 3 - Neuerungen"],
+          "answered": true,
+          "satisfaction": 0.90,
+          "comment": "New functionalities are mentioned, though not in a comparative format.",
+          "improvement_suggestions": [
+            "Include a side-by-side comparison with older models.",
+            "Highlight improvements in a dedicated section.",
+            "Provide expert commentary on the changes."
           ]
         }
       ]
