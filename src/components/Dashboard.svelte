@@ -59,7 +59,7 @@
             <div class="text-muted-foreground text-xs">Needs improvement</div>
           </Card.Content>
           <Card.Footer>
-            <Progress value={25} aria-label="25% increase" />
+            <Progress value={data.general.score} aria-label={`${data.general.score} increase`}/>
           </Card.Footer>
         </Card.Root>
 
@@ -73,7 +73,7 @@
             <div class="text-muted-foreground text-xs">53% of tests passed</div>
           </Card.Content>
           <Card.Footer>
-            <Progress value={12} aria-label="12% increase" />
+            <Progress value={100 * data.general.tests_passed / data.general.tests} aria-label={`${100 * data.general.tests_passed / data.general.tests} increase`}/>
           </Card.Footer>
         </Card.Root>
       </div>
